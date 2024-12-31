@@ -1,34 +1,17 @@
 <theme>
+    <formatVersion>3</formatVersion>
 
-	<formatVersion>3</formatVersion>
-	
-	<!-- Incluir la configuración base -->
-	<include>./../Swatch.xml</include>
+    <!-- Incluir configuraciones globales -->
+    <include>./Swatch.xml</include>
 
-	<!-- Vista común para todos los sistemas -->
-	<view name="system, basic, detailed, video">
-		<image name="logo">
-			<!-- Ruta para los logos de sistemas, utilizando una ruta relativa a la carpeta '_inc/caratulas' -->
-			<path>./../_inc/caratulas/${system.theme}.png</path>
-		</image>
-		<image name="background">
-			<!-- Ruta para los fondos comunes, asegurándote de tener fondos generales o por sistema -->
-			<path>./../_inc/backgrounds/${system.theme}_background.jpg</path>
-		</image>
-	</view>
+    <!-- Usar la misma imagen para todos los sistemas -->
+    <view name="system, basic, detailed, video">
+        <image name="logo">
+            <path>./_inc/caratulas/${system.theme}.png</path>
+        </image>
+        <image name="background_system_image" extra="true">
+            <path>./_inc/background/${system.theme}.jpg</path>
+        </image>
+    </view>
 
-	<!-- Vista específica para la vista básica -->
-	<view name="basic">
-		<image name="background">
-			<path>./../_inc/backgrounds/${system.theme}_basic.jpg</path>
-		</image>
-	</view>
-
-	<!-- Vista específica para la vista detallada -->
-	<view name="detailed">
-		<image name="background">
-			<path>./../_inc/backgrounds/${system.theme}_detailed.jpg</path>
-		</image>
-	</view>
-	
 </theme>
